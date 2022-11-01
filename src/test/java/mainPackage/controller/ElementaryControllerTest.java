@@ -5,19 +5,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-public class ElementaryControllerTest extends TestCase
-{
+public class ElementaryControllerTest extends TestCase{
 
-    public void testHelloPage()
-    {
+    public void testHelloPage(){
     }
 
-    public void testByePage()
-    {
+    public void testByePage(){
     }
 
-    public void testCalculator()
-    {
-
+    public void testCalculator(){
     }
 }

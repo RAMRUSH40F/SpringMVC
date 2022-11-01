@@ -5,11 +5,17 @@ import mainPackage.models.Person;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonDAO
-{
+/**
+ * Data access object.
+ *  Contains data itself for now.
+ */
+
+public class PersonDAO{
+
     private static int PEOPLE_COUNT;
     private List<Person> people;
     private int num;
+
 
     {
         people = new ArrayList<>();
@@ -18,11 +24,11 @@ public class PersonDAO
         people.add(new Person(++PEOPLE_COUNT,"Bob"));
     }
 
-    public List<Person> index()
-    {
+    public List<Person> getPeople(){
         return people;
     }
-    public  Person show(int id){
+
+    public Person show(int id){
         return people.stream().filter(person -> person.getId()==id).findAny().orElse(null);
     }
 

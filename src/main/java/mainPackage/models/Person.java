@@ -1,33 +1,27 @@
 package mainPackage.models;
 
-public class Person
-{
+public class Person{
     private int id;
     private String name;
 
-    public Person(int id, String name)
-    {
+    public Person(int id, String name){
         this.id = id;
         this.name = name;
     }
 
-    public String getName()
-    {
+    public String getName(){
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name){
         this.name = name;
     }
 
-    public int getId()
-    {
+    public int getId(){
         return id;
     }
 
-    public void setId(int id)
-    {
+    public void setId(int id){
         this.id = id;
     }
 }

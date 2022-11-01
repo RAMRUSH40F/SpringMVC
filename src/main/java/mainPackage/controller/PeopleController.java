@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 @GetMapping("/people")
-public class PeopleController
-{
+public class PeopleController{
+
     @GetMapping()
     public String index()
     {
@@ -16,7 +16,6 @@ public class PeopleController
     }
     @GetMapping("/{id}")
     public String show(@PathVariable("id")int id, Model model){
-
         return null;
     }
 }

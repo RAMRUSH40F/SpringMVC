@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class ElementaryController
-{
+public class ElementaryController{
+
     @GetMapping("hello")
     public String helloPage(@RequestParam(value = "name",required = false) String name,
-            @RequestParam(value = "surname", required = false) String surname)
-    {
+            @RequestParam(value = "surname", required = false) String surname){
 
         System.out.println("Hello, "+name+surname);
 
@@ -29,10 +28,9 @@ public class ElementaryController
     public String calculator(@RequestParam(value = "a",required = false) int a,
             @RequestParam(value = "b", required = false) int b,
             @RequestParam(value = "action", required = false) String action,
-            Model model)
-    {
-        String result;
+            Model model){
 
+        String result;
 
         switch (action){
             case "addition" :
