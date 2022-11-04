@@ -18,6 +18,7 @@ public class ElementaryController{
         return "Elementary/hello";
     }
 
+
     @GetMapping("goodbye")
     public String byePage()
     {
