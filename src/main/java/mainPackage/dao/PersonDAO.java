@@ -1,6 +1,7 @@
 package mainPackage.dao;
 
 import mainPackage.models.Person;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  * Data access object.
  *  Contains data itself for now.
  */
-
+@Component
 public class PersonDAO{
 
     private static int PEOPLE_COUNT;
@@ -24,6 +25,11 @@ public class PersonDAO{
         people.add(new Person(++PEOPLE_COUNT,"Bob"));
     }
 
+
+    public void save(Person person){
+        person.setId(++PEOPLE_COUNT);
+        people.add(person);
+    }
     public List<Person> getPeople(){
         return people;
     }
