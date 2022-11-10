@@ -19,9 +19,9 @@ public class PersonDAO {
 
     {
         people = new ArrayList<>();
-        people.add(new Person(++PEOPLE_COUNT, "Tom"));
-        people.add(new Person(++PEOPLE_COUNT, "Mike"));
-        people.add(new Person(++PEOPLE_COUNT, "Bob"));
+        people.add(new Person(++PEOPLE_COUNT, "Tom",(byte) 55,"TomHolland@gmail.com"));
+        people.add(new Person(++PEOPLE_COUNT, "Mike", (byte) 23, "MikeKrap@gmail.com"));
+        people.add(new Person(++PEOPLE_COUNT, "Bob",(byte) 48,"ragfaegaww@aga.com"));
     }
 
     public void save(Person person) {
@@ -37,5 +37,17 @@ public class PersonDAO {
         return people.stream().filter(person -> person.getId() == id).findAny().orElse(null);
     }
 
+    public void update(int id, Person updatedPerson) {
+
+        Person personTobeUpdated = show(id);
+        personTobeUpdated.setName(updatedPerson.getName());
+        personTobeUpdated.setEmail(updatedPerson.getEmail());
+        personTobeUpdated.setAge(updatedPerson.getAge());
+
+    }
+
+    public void delete(int id) {
+        people.removeIf(p -> p.getId() == id);
+    }
 
 }
