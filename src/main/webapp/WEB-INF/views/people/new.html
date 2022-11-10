@@ -5,16 +5,35 @@
         <title>New person</title>
     </head>
     <body>
-<form th:method="POST" th:action="@{/people}" th:object="${person}">
-  <p>
-  <label for="name_field">Enter name:</label>
-  <input type="text" th:field="*{name}" id="name_field">
-  </p>
-  <p>
-  <input type="submit" value="create">
-  </p>
+    <form th:method="POST" th:action="@{/people}" th:object="${person}">
+        <p>
+            <label for="name_field">Enter name:</label>
+            <input type="text" th:field="*{name}" id="name_field">
 
-</form>
+<!--            Error in typing data if exists-->
+        <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+
+        </p>
+        <p>
+            <label for="age_field">Enter age:</label>
+            <input type="text" th:field="*{age}" id="age_field">
+            Error in typing data if exists-->
+        <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</div>
+        </p>
+        <p>
+            <label for="email_field">Enter email:</label>
+            <input type="text" th:field="*{email}" id="email_field">
+            Error in typing data if exists-->
+        <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</div>
+
+        </p>
+
+
+        <p>
+            <input type="submit" value="create">
+        </p>
+
+    </form>
 
     </body>
 </html>
