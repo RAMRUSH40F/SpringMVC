@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <title>Personal page</title>
     </head>
     <body>
-<p th:text="${person.getName()}">VALUE</p>
-<p th:text="${person.getId()}">VALUE</p>
-<p th:href="/people">See other people</p>
+    <h3 th:text="${person.getName()}">VALUE</h3>
+    <h4 th:text="${person.getId()}">VALUE</h4>
+    <h4 th:text="${person.getEmail()}">VALUE</h4>
+
+
+    <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+        <input type="submit" value="Delete"/>
+    </form>
+
+    <a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>
+    <a th:href="/people">See other people</a>
+
+
     </body>
 </html>
