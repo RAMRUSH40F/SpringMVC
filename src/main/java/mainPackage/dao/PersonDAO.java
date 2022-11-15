@@ -17,6 +17,7 @@ public class PersonDAO {
     private        List<Person> people;
     private        int          num;
 
+
     {
         people = new ArrayList<>();
         people.add(new Person(++PEOPLE_COUNT, "Tom",(byte) 55,"TomHolland@gmail.com"));
