@@ -13,16 +13,16 @@ import java.util.List;
 @Component
 public class PersonDAO {
 
-    private static int          PEOPLE_COUNT;
-    private        List<Person> people;
-    private        int          num;
+    private static int PEOPLE_COUNT;
+    private List<Person> people;
+    private int num;
 
 
     {
         people = new ArrayList<>();
-        people.add(new Person(++PEOPLE_COUNT, "Tom",(byte) 55,"TomHolland@gmail.com"));
+        people.add(new Person(++PEOPLE_COUNT, "Tom", (byte) 55, "TomHolland@gmail.com"));
         people.add(new Person(++PEOPLE_COUNT, "Mike", (byte) 23, "MikeKrap@gmail.com"));
-        people.add(new Person(++PEOPLE_COUNT, "Bob",(byte) 48,"ragfaegaww@aga.com"));
+        people.add(new Person(++PEOPLE_COUNT, "Bob", (byte) 48, "ragfaegaww@aga.com"));
     }
 
     public void save(Person person) {
