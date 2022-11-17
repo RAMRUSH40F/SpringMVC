@@ -15,8 +15,6 @@ public class PersonDAO {
 
     private static int PEOPLE_COUNT;
     private List<Person> people;
-    private int num;
-
 
     {
         people = new ArrayList<>();
