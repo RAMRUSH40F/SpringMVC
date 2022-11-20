@@ -56,6 +56,7 @@ public class PersonDAO {
         }
     }
 
+
     public List<Person> getPeople() {
         List<Person> people = new ArrayList<>();
         try {
