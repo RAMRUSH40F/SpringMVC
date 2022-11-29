@@ -40,8 +40,6 @@ public class PersonDAO {
 
 
     }
-
-
     public void save(Person person) {
         try {
             PreparedStatement preparedStatement =
