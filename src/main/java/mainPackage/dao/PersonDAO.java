@@ -17,8 +17,6 @@ import java.util.List;
  * Contains data itself for now.
  */
 
-
-
 @Component
 public class PersonDAO {
 
