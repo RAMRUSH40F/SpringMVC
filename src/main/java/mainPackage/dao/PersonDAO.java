@@ -20,7 +20,6 @@ import java.util.List;
 @Component
 public class PersonDAO {
 
-
     private static final String URL = "jdbc:postgresql://localhost:5432/SpringMvcDb";
     private static final String PASSWORD = "lolaV123";
     private static final String USERNAME = "postgres";
